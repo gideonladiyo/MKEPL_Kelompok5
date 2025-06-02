@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  ci_inspecion:
+  ci_inspection:
     name: Run Continuous Code Inspection
     uses: ./.github/workflows/ci-inspection.yml
     secrets: inherit
