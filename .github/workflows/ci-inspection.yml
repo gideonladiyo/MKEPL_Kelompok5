@@ -1,0 +1,16 @@
+name: CI Continuous Code Inspection
+
+on:
+  workflow_call:
+    secrets:
+      SONAR_TOKEN:
+        required: true
+      SONAR_HOST:
+        required: true
+
+jobs:
+  sonarcube_test:
+    name: SonarQube Scan
+    runs-on: ubuntu_latest
+    steps:
+      # nanti stepsnya di sini

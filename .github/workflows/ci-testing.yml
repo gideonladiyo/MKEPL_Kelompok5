@@ -1,0 +1,8 @@
+name: CI Testing
+
+jobs:
+  tests:
+    name: Testing app
+    runs-on: ubuntu_latest
+    steps:
+      # nanti stepsnya di sini
