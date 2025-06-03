@@ -10,4 +10,27 @@ jobs:
     name: SonarQube Scan
     runs-on: ubuntu-latest
     steps:
-      # nanti stepsnya di sini
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Sonar Scanner for npm
+        run: npm install -g @sonar/scan
+
+      - name: Run SonarQube Scan
+        id: run_sonar_scanner
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: |
+          sonar \
+            -Dsonar.host.url=${{ secrets.SONAR_HOST }} \
+            -Dsonar.token=$SONAR_TOKEN \
+            -Dsonar.projectKey=mkepl_kel5 \
+            -Dsonar.sources=. \
+            -Dsonar.sourceEncoding=UTF-8
