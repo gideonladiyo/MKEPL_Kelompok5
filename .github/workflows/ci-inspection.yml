@@ -8,6 +8,6 @@ on:
 jobs:
   sonarcube_test:
     name: SonarQube Scan
-    runs-on: ubuntu_latest
+    runs-on: ubuntu-latest
     steps:
       # nanti stepsnya di sini
