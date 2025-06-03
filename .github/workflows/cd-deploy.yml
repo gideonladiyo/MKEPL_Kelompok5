@@ -8,7 +8,7 @@ on:
 jobs:
   deployment:
     name: Deploy to production
-    runs-on: ubuntu_latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
