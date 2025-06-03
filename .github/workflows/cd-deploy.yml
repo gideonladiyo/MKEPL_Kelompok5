@@ -41,10 +41,10 @@ jobs:
             fi
 
             echo "Menghapus container lama jika ada"
-            docker stop tubes_mkepl 2>/dev/null || true
-            docker rm tubes_mkepl 2>/dev/null || true
+            sudo docker stop tubes_mkepl 2>/dev/null || true
+            sudo docker rm tubes_mkepl 2>/dev/null || true
 
             echo "Membangun Docker image..."
-            docker build -t tubes_mkepl .
+            sudo docker build -t tubes_mkepl .
             echo "🚀 Menjalankan container..."
-            docker run -d -p 3000:3000 --name tubes_mkepl tubes_mkepl
+            sudo docker run -d -p 3000:3000 --name tubes_mkepl tubes_mkepl
