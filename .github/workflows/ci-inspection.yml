@@ -31,6 +31,6 @@ jobs:
           sonar \
             -Dsonar.host.url=${{ secrets.SONAR_HOST }} \
             -Dsonar.token=$SONAR_TOKEN \
-            -Dsonar.projectKey=gideon \
+            -Dsonar.projectKey=mkepl_kel5 \
             -Dsonar.sources=. \
             -Dsonar.sourceEncoding=UTF-8\
