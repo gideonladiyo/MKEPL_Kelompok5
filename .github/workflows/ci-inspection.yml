@@ -1,12 +1,9 @@
 name: CI Continuous Code Inspection
 
 on:
-  workflow_call:
-    secrets:
-      SONAR_TOKEN:
-        required: true
-      SONAR_HOST:
-        required: true
+  psuh:
+    branches:
+      - inspection
 
 jobs:
   sonarcube_test:
