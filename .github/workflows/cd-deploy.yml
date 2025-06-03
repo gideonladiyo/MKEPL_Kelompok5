@@ -1,14 +1,9 @@
 name: CD Deployment
 
 on:
-  workflow_call:
-    secrets:
-      SERVER_HOST:
-        required: true
-      SERVER_USER:
-        required: true
-      SERVER_PASSWORD:
-        required: true
+  push:
+    branches:
+      - main
 
 jobs:
   deployment:
